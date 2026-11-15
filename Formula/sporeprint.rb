@@ -1,8 +1,8 @@
 class Sporeprint < Formula
   desc "Audio fingerprinting tool using Chromaprint"
-  homepage "https://github.com/farcloser/sporeprint"
+  homepage "https://github.com/mycophonic/sporeprint"
   license "Apache-2.0"
-  head "https://github.com/farcloser/sporeprint.git", branch: "main"
+  head "https://github.com/mycophonic/sporeprint.git", branch: "main"
 
   depends_on "cmake" => :build
   depends_on "go" => :build

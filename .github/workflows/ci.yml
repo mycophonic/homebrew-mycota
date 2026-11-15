@@ -23,17 +23,17 @@ jobs:
 
       - name: Register tap
         run: |
-          mkdir -p "$(brew --repository)/Library/Taps/farcloser"
-          ln -s "$GITHUB_WORKSPACE" "$(brew --repository)/Library/Taps/farcloser/homebrew-mycota"
+          mkdir -p "$(brew --repository)/Library/Taps/mycophonic"
+          ln -s "$GITHUB_WORKSPACE" "$(brew --repository)/Library/Taps/mycophonic/homebrew-mycota"
 
       - name: Install and test formulas
         run: |
           for formula in Formula/*.rb; do
             name=$(basename "$formula" .rb)
             echo "::group::Installing $name"
-            brew install --head --build-from-source "farcloser/mycota/$name"
+            brew install --head --build-from-source "mycophonic/mycota/$name"
             echo "::endgroup::"
             echo "::group::Testing $name"
-            brew test "farcloser/mycota/$name"
+            brew test "mycophonic/mycota/$name"
             echo "::endgroup::"
           done
