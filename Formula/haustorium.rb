@@ -1,8 +1,8 @@
 class Haustorium < Formula
   desc "Audio quality analysis tool for music defect detection"
-  homepage "https://github.com/farcloser/haustorium"
+  homepage "https://github.com/mycophonic/haustorium"
   license "Apache-2.0"
-  head "https://github.com/farcloser/haustorium.git", branch: "main"
+  head "https://github.com/mycophonic/haustorium.git", branch: "main"
 
   depends_on "go" => :build
   # Hard dependency short term for convenience
